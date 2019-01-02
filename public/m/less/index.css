@@ -1,0 +1,103 @@
+img {
+  vertical-align: middle;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 0.45rem;
+  text-align: center;
+  background-color: #006699;
+  line-height: 0.45rem;
+  z-index: 2;
+}
+#header h4 {
+  flex: 1;
+  color: #fff;
+  font-size: 0.18rem;
+  font-weight: 400;
+  line-height: 0.45rem;
+  margin: 0;
+}
+#header a {
+  width: 0.45rem;
+  color: #fff;
+  font-size: 0.14rem;
+  line-height: 0.45rem;
+}
+#main {
+  margin: .45rem 0;
+}
+#main #nav {
+  padding: 0.1rem;
+}
+#main #nav a {
+  display: block;
+}
+#main #nav a img {
+  width: 100%;
+}
+#main #banner {
+  padding: 0.1rem;
+}
+#main #banner .mui-row .left a {
+  display: flex;
+}
+#main #banner .mui-row .left a img {
+  width: 50%;
+  height: 1.2rem;
+}
+#main #banner .mui-row .right a img {
+  width: 100%;
+  height: 2.4rem;
+}
+#main #brand {
+  padding: 0.1rem;
+}
+#main #brand .title a img {
+  width: 100%;
+}
+#main #brand .content a img {
+  width: 100%;
+}
+#main #sport .title {
+  padding: 0 0.1rem;
+}
+#main #sport .title a {
+  display: block;
+}
+#main #sport .title a img {
+  width: 100%;
+}
+#main #sport .content {
+  padding: 0 0.05rem;
+}
+#main #sport .content a img {
+  width: 100%;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #006699;
+  z-index: 2;
+  height: 0.45rem;
+}
+#footer .mui-row a {
+  color: #fff;
+  display: block;
+  padding: 0.05rem 0;
+  text-align: center;
+}
+#footer .mui-row a i {
+  font-size: 0.18rem;
+}
+#footer .mui-row a span {
+  font-size: 0.12rem;
+  display: block;
+}
+#footer .mui-row a.active {
+  color: #d29a1b;
+}
