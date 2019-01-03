@@ -53,13 +53,13 @@
                 <div class="mui-scroll">
                     <!--这里放置真实显示的DOM内容-->
                     <div class="mui-row">
-                        <div class="mui-col-xs-4">
+                        <!-- <div class="mui-col-xs-4">
                             <a href="#">
                                 <img src="images/brand1.png" alt="">
                                 <p>耐克1</p>
                             </a>
-                        </div>
-                        <div class="mui-col-xs-4">
+                        </div> -->
+                        <!-- <div class="mui-col-xs-4">
                             <a href="#">
                                 <img src="images/brand2.png" alt="">
                                 <p>耐克2</p>
@@ -88,7 +88,7 @@
                                 <img src="images/brand6.png" alt="">
                                 <p>耐克6</p>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -132,10 +132,23 @@
         </div>
     </footer>
 </body>
+<script id="tpl-left" type="text/html">
+    {{each rows value index}}
+        <li class="{{ index == 0?  'active':''}}"><a href="#">{{value.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script id="tpl-right" type="text/html">
+    <div class="mui-col-xs-4">
+            <a href="#">
+                <img src="images/brand1.png" alt="">
+                <p>耐克1</p>
+            </a>
+        </div>
+</script>
 <!-- 1. 引入mui的JS -->
 <script src="lib/mui/js/mui.js"></script>
 <!-- 2. 引入模板引擎的 注意引入template-web.js 最新版最简洁的  -->
-<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/art-template/template-web.js"></script>
 <!-- 3. 引入zepto的JS ajax dom操作的Js库 -->
 <script src="lib/zepto/zepto.min.js"></script>
 <!-- 4. 引入自己的JS文件 -->
