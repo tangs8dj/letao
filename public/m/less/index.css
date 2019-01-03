@@ -1,6 +1,30 @@
 img {
   vertical-align: middle;
 }
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #006699;
+  z-index: 2;
+  height: 0.45rem;
+}
+#footer .mui-row a {
+  color: #fff;
+  display: block;
+  padding: 0.05rem 0;
+  text-align: center;
+}
+#footer .mui-row a i {
+  font-size: 0.18rem;
+}
+#footer .mui-row a span {
+  font-size: 0.12rem;
+  display: block;
+}
+#footer .mui-row a.active {
+  color: #d29a1b;
+}
 #header {
   position: fixed;
   top: 0;
@@ -62,19 +86,29 @@ img {
 #main #brand .content a img {
   width: 100%;
 }
-#main #sport .title {
+#main #sport .title,
+#main #women .title,
+#main #man .title {
   padding: 0 0.1rem;
 }
-#main #sport .title a {
+#main #sport .title a,
+#main #women .title a,
+#main #man .title a {
   display: block;
 }
-#main #sport .title a img {
+#main #sport .title a img,
+#main #women .title a img,
+#main #man .title a img {
   width: 100%;
 }
-#main #sport .content {
+#main #sport .content,
+#main #women .content,
+#main #man .content {
   padding: 0 0.05rem;
 }
-#main #sport .content a img {
+#main #sport .content a img,
+#main #women .content a img,
+#main #man .content a img {
   width: 100%;
 }
 #footer {
