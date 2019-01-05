@@ -1,0 +1,70 @@
+@import "./base.less";
+
+
+//头部区域
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // display: flex;
+    width: 100%;
+    height: @header-height;
+    padding:0 .45rem;
+    background-color: @main-color;
+    line-height: @header-height;
+    z-index: 2;
+    text-align: center;
+    .left {
+        position: absolute;
+        left: 0;
+        color: #fff;
+        float: left;
+        font-size: 0.40rem;
+    }
+    h4 {
+        line-height: @header-height;
+        margin: 0;
+        font-weight: normal;
+        font-size: 0.18rem;
+        color: #fff;
+    }
+   
+}
+
+
+// main
+#main {
+    background-color: #fff;
+    // padding:0 0.1rem;
+    .search {
+        padding: 0.1rem ;
+        display: flex;
+        .search-input {
+            background-color: #fff;
+            border: 1px solid #006699;
+            font-size: 0.14rem;
+            text-align: left;
+            border-radius: 0.06rem 0 0 0.06rem;
+            margin-bottom: 0;
+        }
+        .btn-search {
+            border-radius: 0 0.03rem .03rem 0;
+        }
+    }
+    .searchHistory {
+        .mui-card {
+            .mui-card-header {
+                span {
+                    font-size: 0.14rem;
+                }
+            }
+            .mui-card-content {
+                .delete {
+                    float: right;
+                    font-size: 0.2rem;
+                    color: #797979;
+                }
+            }
+        }
+    }
+}

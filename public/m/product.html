@@ -12,7 +12,7 @@
     <!-- 2. 引入字体图标的CSS -->
     <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
     <!-- 3. 引入主页的less文件 -->
-    <link rel="stylesheet/less" href="less/category.less">
+    <link rel="stylesheet/less" href="less/product.less">
     <!-- 4. 引入less.js编译器文件 -->
     <script src="lib/less/less.js"></script>
     <!-- 5. 在页面前引入rem.js 等页面加载出来之前生效样式马上执行 -->
@@ -23,42 +23,28 @@
 <body>
     <!-- 头部区域 -->
     <header id="header">
-        <a href="#" class="mui-icon mui-icon-arrowthinleft left"></a>
-        <a href="search.html" class="search-a">
-            <input type="search" class="search" placeholder="搜索商品">
-            <i class="fa fa-search"></i>
-        </a>
-        <a href="search.html" class="right">搜索</a>
+        <a href="javascript:history.back();" class="left mui-icon mui-icon-arrowthinleft"></a>
+        <h4>商品列表</h4>
     </header>
 
 
     <!-- 主体区域 -->
     <main id="main">
-        <div class="content-left">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <ul>
-                        <li class="active"><a href="#">运动馆</a></li>
-                        <li><a href="#">女士馆</a></li>
-                        <li><a href="#">男士馆</a></li>
-                        <li><a href="#">生活馆</a></li>
-                        <li><a href="#">单身馆</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="content-right">
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <div class="mui-row">
+        <form action="#" class="search">
+            <input type="search" class="search-input" placeholder="请输入搜索商品">
+            <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined btn-search">搜索</button>
+        </form>
 
-                    </div>
-                </div>
-            </div>
+        <!-- 搜索结果 -->
+        <div class="screen">
+            <a href="#" class="active">上架时间<i class="mui-icon mui-icon-arrowdown"></i></a>
+            <a href="#">价格<i class="mui-icon mui-icon-arrowdown"></i></a>
+            <a href="#">销量<i class="mui-icon mui-icon-arrowdown"></i></a>
+            <a href="#">折扣<i class="mui-icon mui-icon-arrowdown"></i></a>
         </div>
+
     </main>
+
 
     <!-- 底部区域 -->
     <footer id="footer">
@@ -82,20 +68,6 @@
         </div>
     </footer>
 </body>
-<script id="tpl-left" type="text/html">
-    {{each rows value index}}
-        <li data-index={{index+1}} class="{{ index == 0?  'active':''}}"><a href="#">{{value.categoryName}}</a></li>
-    {{/each}}
-</script>
-<script id="tpl-right" type="text/html">
-    {{each rows value}}
-    <div class="mui-col-xs-4">
-            <a href="#" >
-                <img src="{{ value.brandLogo}}" alt="">
-                <p>{{value.brandName}}</p>
-            </a>
-    </div>
-    {{/each}}
 </script>
 <!-- 1. 引入mui的JS -->
 <script src="lib/mui/js/mui.js"></script>
@@ -104,6 +76,6 @@
 <!-- 3. 引入zepto的JS ajax dom操作的Js库 -->
 <script src="lib/zepto/zepto.min.js"></script>
 <!-- 4. 引入自己的JS文件 -->
-<script src="js/category.js"></script>
+<script src="js/product.js"></script>
 
 </html>

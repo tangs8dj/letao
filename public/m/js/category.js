@@ -9,17 +9,26 @@ $(function () {
         success: function (data){
             // console.log(data);
             var html = template("tpl-left",data);
-            console.log(html);
+            // console.log(html);
             $('.content-left ul').html(html)
         }
     })
-    $.ajax({
-        url:"/category/querySecondCategory",
-        success: function (data){
-            console.log(data);
-            var html = template("tpl-right",data);
-            console.log(html);
-            $('.mui-row').html(html)
-        }
+    getCategory(1);
+    function getCategory(id){
+        $.ajax({
+            url:"/category/querySecondCategory",
+            data:{id:id},
+            success: function (data){
+                // console.log(data);
+                var html = template("tpl-right",data);
+                // console.log(html);
+                $('.content-right .mui-row').html(html)
+            }
+        })
+    }
+    $('.content-left ul').on('tap','li',function (){
+        $(this).addClass('active').siblings().removeClass('active');
+        getCategory(this.dataset['index']);
     })
+
 })

@@ -32,7 +32,9 @@
     }
 }
 #main {
-    margin: .45rem 0;
+    // padding: .45rem 0;
+    margin-bottom: 0.45rem;
+    height: auto;
     #slide {
 
     }
@@ -109,30 +111,3 @@
 
 }
 
-//底部区域
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    background-color: @main-color;
-    z-index: 2;
-    height: @header-height;
-    .mui-row {
-      a {
-          color: #fff;
-          display: block;
-          padding: 0.05rem 0;
-          text-align: center;
-          i {
-              font-size: 0.18rem;
-          }
-          span {
-              font-size: 0.12rem;
-              display: block;
-          }  
-          &.active {
-              color: #d29a1b;
-          }
-      }
-    }
-}

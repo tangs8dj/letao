@@ -1,12 +1,44 @@
 img {
   vertical-align: middle;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+}
+body {
+  max-width: 750px;
+  margin: 0px auto;
+  /* 把 MUI默认字体17变成 14px */
+  font-size: .14rem;
+  /* 如果觉得文字有点偏上 行高继承body的默认21px行高 所有有点偏 行高也变成14px */
+  line-height: .14rem;
+}
+/* 给body设置padding 让 main被挤到中间来 */
+body {
+  padding: .45rem 0;
+  /* 给body设置高度 100vh */
+  height: 100vh;
+}
+/* 中间部分的主体样式 */
+#main {
+  /* 会在main里面添加一个区域滚动容器 MUI自带了绝对定位 可以main设置相对定位 让 mui-scroll-wrapper相对main去定位 */
+  position: relative;
+  /* 同时需要给main设置高度100% 让main在中间范围显示 继承body内容的高度 */
+  height: 100%;
+}
 #footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100vw;
   background-color: #006699;
-  z-index: 2;
+  z-index: 4;
   height: 0.45rem;
 }
 #footer .mui-row a {
@@ -52,7 +84,8 @@ img {
   line-height: 0.45rem;
 }
 #main {
-  margin: .45rem 0;
+  margin-bottom: 0.45rem;
+  height: auto;
 }
 #main #nav {
   padding: 0.1rem;
@@ -110,28 +143,4 @@ img {
 #main #women .content a img,
 #main #man .content a img {
   width: 100%;
-}
-#footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  background-color: #006699;
-  z-index: 2;
-  height: 0.45rem;
-}
-#footer .mui-row a {
-  color: #fff;
-  display: block;
-  padding: 0.05rem 0;
-  text-align: center;
-}
-#footer .mui-row a i {
-  font-size: 0.18rem;
-}
-#footer .mui-row a span {
-  font-size: 0.12rem;
-  display: block;
-}
-#footer .mui-row a.active {
-  color: #d29a1b;
 }

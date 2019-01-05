@@ -35,10 +35,9 @@ body {
 #footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100vw;
   background-color: #006699;
-  z-index: 4;
+  z-index: 2;
   height: 0.45rem;
 }
 #footer .mui-row a {
@@ -56,4 +55,56 @@ body {
 }
 #footer .mui-row a.active {
   color: #d29a1b;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.45rem;
+  padding: 0 .45rem;
+  background-color: #006699;
+  line-height: 0.45rem;
+  z-index: 2;
+  text-align: center;
+}
+#header .left {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  float: left;
+  font-size: 0.40rem;
+}
+#header h4 {
+  line-height: 0.45rem;
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.18rem;
+  color: #fff;
+}
+#main {
+  background-color: #fff;
+}
+#main .search {
+  padding: 0.1rem ;
+  display: flex;
+}
+#main .search .search-input {
+  background-color: #fff;
+  border: 1px solid #006699;
+  font-size: 0.14rem;
+  text-align: left;
+  border-radius: 0.06rem 0 0 0.06rem;
+  margin-bottom: 0;
+}
+#main .search .btn-search {
+  border-radius: 0 0.03rem .03rem 0;
+}
+#main .searchHistory .mui-card .mui-card-header span {
+  font-size: 0.14rem;
+}
+#main .searchHistory .mui-card .mui-card-content .delete {
+  float: right;
+  font-size: 0.2rem;
+  color: #797979;
 }
